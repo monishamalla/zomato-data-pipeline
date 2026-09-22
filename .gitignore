@@ -1,0 +1,59 @@
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# =========================
+# Streamlit / RAG cache
+# =========================
+*.parquet
+.streamlit/secrets.toml
+
+# =========================
+# dbt
+# =========================
+dbt_packages/
+target/
+logs/
+.partial_parse.msgpack
+
+# =========================
+# Airflow
+# =========================
+airflow/logs/
+airflow/__pycache__/
+
+# =========================
+# IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# OS
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# dbt local configuration
+# =========================
+profiles.yml
+.user.yml
+
+# =========================
+# Local datasets
+# =========================
+data/
