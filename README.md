@@ -299,9 +299,3 @@ API keys and Snowflake credentials should always be stored locally through envir
 **Monisha Malla**
 
 Data Engineering | SQL | Python | Snowflake | dbt | AWS | Airflow
-
----
-
-## 🔗 Repository
-
-[GitHub – Zomato Data Engineering Pipeline](https://github.com/monishamalla/zomato-data-pipeline)
