@@ -1,10 +1,10 @@
 #  Zomato Data Engineering & AI Pipeline
 
-An end-to-end **Data Engineering project** built using **Snowflake, dbt, Apache Airflow, Docker, Python, SQL, and AI/LLM technologies**.
+An end-to-end **Data Engineering project** built using **AWS, Snowflake, dbt, Apache Airflow, Docker, Python, SQL, and AI/LLM technologies**.
+**Zomato Dataset → Amazon S3 → Snowflake → dbt → Airflow → AI (OpenAI)**
 
 The project demonstrates how raw Zomato-style data can be transformed into analytics-ready datasets and enriched with AI-powered customer review insights.
 
-Zomato/Food Delivery Dataset → Amazon S3 → Snowflake → dbt → Airflow → AI (OpenAI)
 ---
 
 ##  Architecture
