@@ -1,7 +1,7 @@
 #  Zomato Data Engineering & AI Pipeline
 
 An end-to-end **Data Engineering project** built using **AWS, Snowflake, dbt, Apache Airflow, Docker, Python, SQL, and AI/LLM technologies**.
-**Zomato Dataset → Amazon S3 → Snowflake → dbt → Airflow → AI (OpenAI)**
+**Zomato Dataset → Amazon S3 → Snowflake → dbt → Airflow → AI**
 
 The project demonstrates how raw Zomato-style data can be transformed into analytics-ready datasets and enriched with AI-powered customer review insights.
 
@@ -11,6 +11,9 @@ The project demonstrates how raw Zomato-style data can be transformed into analy
 
 ```text
                   Zomato Source Data
+                         │
+                         ▼
+                    Amazon S3
                          │
                          ▼
                   Snowflake RAW
@@ -51,7 +54,7 @@ The pipeline processes seven datasets:
 * Order Items
 * Reviews
 
-The data is loaded into **Snowflake**, transformed using **dbt**, and organized into fact, dimension, and analytical tables.
+The data is loaded from S3 into Snowflake. **Snowflake**, transformed using **dbt**, and organized into fact, dimension, and analytical tables.
 
 **Apache Airflow** orchestrates the batch workflow, while the AI layer provides review enrichment, RAG-based analysis, and natural-language SQL querying.
 
@@ -70,7 +73,7 @@ The data is loaded into **Snowflake**, transformed using **dbt**, and organized 
 | Embeddings       | Sentence Transformers |
 | Application      | Streamlit             |
 | Version Control  | Git / GitHub          |
-
+| Cloud Storage    | Amazon S3             |
 ---
 
 ##  Project Structure
@@ -235,6 +238,7 @@ The transformed data supports analysis such as:
 ### Prerequisites
 
 * Python 3.11+
+* AWS account
 * Docker Desktop
 * Snowflake account
 * dbt
