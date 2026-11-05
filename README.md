@@ -54,7 +54,7 @@ The pipeline processes seven datasets:
 * Order Items
 * Reviews
 
-The data is loaded from S3 into Snowflake. **Snowflake**, transformed using **dbt**, and organized into fact, dimension, and analytical tables.
+The data is loaded from Amazon S3 into Snowflake, transformed using dbt, and organized into fact, dimension, and analytical tables.
 
 **Apache Airflow** orchestrates the batch workflow, while the AI layer provides review enrichment, RAG-based analysis, and natural-language SQL querying.
 
@@ -74,6 +74,7 @@ The data is loaded from S3 into Snowflake. **Snowflake**, transformed using **db
 | Application      | Streamlit             |
 | Version Control  | Git / GitHub          |
 | Cloud Storage    | Amazon S3             |
+
 ---
 
 ##  Project Structure
@@ -250,6 +251,11 @@ The transformed data supports analysis such as:
 git clone https://github.com/monishamalla/zomato-data-pipeline.git
 cd zomato-data-pipeline
 ```
+### Set up S3 and Snowflake access
+   1. Create an S3 bucket and upload the seven CSVs (one folder per table)
+   2. Create an IAM role/policy with read access to the bucket
+   3. Create a Snowflake storage integration and external stage pointing to the bucket
+   4. Load the files into the RAW schema using COPY INTO
 
 ### Configure dbt
 
