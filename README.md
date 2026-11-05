@@ -4,6 +4,7 @@ An end-to-end **Data Engineering project** built using **Snowflake, dbt, Apache 
 
 The project demonstrates how raw Zomato-style data can be transformed into analytics-ready datasets and enriched with AI-powered customer review insights.
 
+Zomato/Food Delivery Dataset → Amazon S3 → Snowflake → dbt → Airflow → AI (OpenAI)
 ---
 
 ##  Architecture
